@@ -33,10 +33,10 @@ def my_callback(event):
     code = devices[event.deviceId]
     # sending message to every subscribed user
     for user in users:
-        if event.data['Voltage'] in range(801, 1025) and code in users[user]:
+        if event.data['Voltage'] in range(1, 2) and code in users[user]:
             vk.method('messages.send', {'user_id': user, 'random_id': time.gmtime(),
                                         'message': 'Вам следует в ближайшее время проверить холодильник'})
-        elif event.data['Voltage'] in range(400, 800) and code in users[user]:
+        elif event.data['Voltage'] in range(700, 800) and code in users[user]:
             vk.method('messages.send', {'user_id': user, 'random_id': time.gmtime(),
                                         'message': 'Вам следует СРОЧНО проверить холодильник!'})
 
