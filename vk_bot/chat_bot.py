@@ -42,8 +42,7 @@ def my_callback(event):
 
 
 # creating IBM cloud client object
-client = ibmiotf. \
-    application.Client(options)
+client = ibmiotf.application.Client(options)
 client.connect()
 client.subscribeToDeviceEvents(deviceType=source_device_type, deviceId=source_device_id, event=my_event)
 client.deviceEventCallback = my_callback
