@@ -1,0 +1,6 @@
+vk_bot/*.log
+vk_bot/log.txt
+vk_bot/credentials.py
+vk_bot/token_and_codes.py
+vk_bot/users.db
+firmware/auth.py
